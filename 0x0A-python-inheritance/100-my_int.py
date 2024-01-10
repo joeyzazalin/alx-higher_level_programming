@@ -1,10 +1,14 @@
 #!/usr/bin/python3
-"""this module defines a function that adds attributes to objects"""
+"""Defines a class MyInt that inherits from int."""
 
 
-def add_attribute(obj, att, value):
-    """Add a new attribute to an object if possible
-    """
-    if not hasattr(obj, "__dict__"):
-        raise TypeError("can't add new attribute")
-    setattr(obj, att, value)
+class MyInt(int):
+    """Invert int operators == and !=."""
+
+    def __eq__(self, value):
+        """Override == opeartor with != behavior."""
+        return self.real != value
+
+    def __ne__(self, value):
+        """Override != operator with == behavior."""
+        return self.real == value
