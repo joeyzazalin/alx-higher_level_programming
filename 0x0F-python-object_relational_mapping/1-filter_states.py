@@ -1,8 +1,8 @@
 #!/usr/bin/python3
 """
-this script lists all state with 
-a `name` starting with the latter 'N'
-from the database `hbtn_0e_0_usa`
+This script lists all states with
+a `name` starting with the letter `N`
+from the database `hbtn_0e_0_usa`.
 """
 
 import MySQLdb
@@ -10,7 +10,7 @@ from sys import argv
 
 if __name__ == '__main__':
     """
-    Access to the database and get the states 
+    Access to the database and get the states
     from the database.
     """
     db = MySQLdb.connect(host="localhost", user=argv[1], port=3306,
@@ -24,4 +24,3 @@ if __name__ == '__main__':
 
     for row in rows:
         print(row)
-
